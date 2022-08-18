@@ -1,14 +1,17 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom"
 import './styles/App.css';
 import Navbar from './components/navbar';
+// import {Games} from './pages/games';
+import Home from './pages/home';
+import Footer from './components/footer';
 
-const App = () => {
+export const App = () => {
   return (
     <div className="App">
-      <Navbar/>
+        <Navbar/>
+        <div className="iconBorderTop"></div>
+        <Home/>
+        <Footer/>
     </div>
   );
 }
-
-export default App;

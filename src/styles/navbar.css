@@ -1,20 +1,50 @@
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines{
-  display: none;
-}
 .navbar{
   box-shadow: 0px 5px 10px 0px #aaa;
   position: fixed;
   width: 100%;
-  background: #fff;
-  color: #000;
-  opacity: 0.85;
-  height: 50px;
+  background: black;
+  height: 3rem;
   z-index: 12;
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  block-size: fit-content;
+  display: flex;
+  transform: translateX(1em) translateY(-.5em);
+  object-fit: cover;
+  height: auto;
+  width: auto;
+}
+.logoText{
+  background-color: rgba(21, 81, 243, 0.8);
+  color: white;
 }
 .navbar-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  block-size: fit-content;
+  transform:translateY(-1.3em) ;
+}
+#menu  {
+  list-style-type: none;
   display:flex;
-  justify-content: space-between;
-  height: 64px;
-  align-items:center;
+  flex-direction: row;
+  block-size: fit-content;
+  vertical-align: middle;
+  font-size: 1.75em;
+}
+li{
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+a:link{
+  color: #4D9BDA;
+  background-color: black;
+}
+a:visited{
+  color: #65FEFE;
+  background-color: black;
 }
