@@ -17,8 +17,11 @@
   width: auto;
 }
 .logoText{
-  background-color: rgba(21, 81, 243, 0.8);
+  background-color: white;
   color: white;
+  font-family: silkscreen;
+  font-weight: bold;
+
 }
 .navbar-container{
   height: 100%;
@@ -41,10 +44,10 @@ li{
 
 }
 a:link{
-  color: #4D9BDA;
+  color: red;
   background-color: black;
 }
 a:visited{
-  color: #65FEFE;
+  color: royalblue;
   background-color: black;
 }

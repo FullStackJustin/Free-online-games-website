@@ -1,3 +1,64 @@
 .gamesContainer{
-  
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    overflow-y: scroll;
+    height: 70vh;
+    width: 100vw
+}
+.gamesPageContainer h1{
+  color: #2230FA;
+  font-family: silkscreen;
+}
+.gamesPageContainer{
+background-image: url('')
+}
+.gameCardNav{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+}
+.gameCardTitle{
+  justify-content: flex-start;
+  font-size: .85em;
+  font-family: silkscreen;
+  background-color: yellow;
+  color: black;
+  border: 1.5px solid grey;
+  padding:3px;
+  border-radius: 5px;
+}
+.gameCardBtn{
+  background-color: yellow;
+  font-size:.85em;
+  border-radius: 7.5px;
+  height: 2em;
+  align-items: center;
+  transform:translateY(1em);
+  font-family: silkscreen;
+}
+.game{
+  margin-left: 5rem;
+  font-family: silkscreen;
+  border-top: 5px dashed red;
+  border: 1px solid rgb(78,78,89);
+  border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+  color: white;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+  width: 15rem;
+  height: auto;
+  padding:1rem;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+}
+.game:hover{
+  border-radius: 0% 0% 50% 50% / 0% 0% 25% 25% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);}
+img{
+  width:10em;
+  height: auto;
+  object-fit: contain;
 }

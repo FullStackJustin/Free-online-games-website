@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/App.css';
 import Navbar from './components/navbar';
-// import {Games} from './pages/games';
+import {Games} from './pages/games';
 import Home from './pages/home';
 import Footer from './components/footer';
 
@@ -11,6 +11,7 @@ export const App = () => {
         <Navbar/>
         <div className="iconBorderTop"></div>
         <Home/>
+        <Games/>
         <Footer/>
     </div>
   );
