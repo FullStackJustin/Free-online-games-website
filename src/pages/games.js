@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../styles/games.css"
 
 export const Games = () => {
+
+  const [dataState,setDataState]  = useState([]);
+
   const options = {
   	method: 'GET',
   	headers: {
@@ -9,33 +12,36 @@ export const Games = () => {
   		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
   	}
   };
-
+ 
   fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc', options)
   .then((response) => {return response.json()})
-  .then((data) => {
-    let dataState = "";
-    data.map((values) => {
-      dataState += `<div className="game" id="game">
-                <div className="gameCardNav">
-                  <p className="gameCardTitle">${values.title}</p>
-                  <button className="gameCardBtn" type="button" onClick=${values.game_url}>More</button>
-                </div>
-                <img src="${values.thumbnail}" alt="img"></img>
-                <div className="genreAndPublisher">
-                  <p className="genre">${values.genre}</p>
-                  <p className="publisher">${values.publisher}</p>
-                </div>
-                <p className="gameDescription">${values.short_description}</p>
-              </div>`
-    })
-    document.getElementById('games').innerHTML = dataState;
-  })
+  .then((data) => {setDataState(data)})
   .catch((err) => console.error(err))
-    return(
-      <div className="gamesPageContainer">
-        <h1>Pc Pros</h1>
-      <div className="gamesContainer" id="games">
 
+
+
+    return(
+      <div className="gamesPageContainer" >
+        <h1>Pc Pros</h1>
+      <div className="gamesContainer" id="games"> 
+      {dataState.map((values, index) => {
+        return (
+          <div className="game" id="game" key={index}>
+                <div className="gameCardNav">
+                  <p className="gameCardTitle">{values.title}</p>
+                  
+                </div>
+                <img src={values.thumbnail} alt="img"></img>
+                <div className="genreAndPublisher">
+                  <p className="genre">{values.genre}</p>
+                  <p className="publisher">{values.publisher}</p>
+                </div>
+                <p className="gameDescription">{values.short_description}</p>
+                <div className="moreBtn"><a /* className="gameCardBtn"*/ type="button" href={values.game_url} target="_blank" rel="noreferrer">More</a></div>
+              </div>
+        )
+      })}
+      
       </div>
     </div>
     )
