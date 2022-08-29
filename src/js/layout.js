@@ -3,12 +3,13 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import {Navbar} from './components/navbar'
 
 
-export const Layout = () => {
+ const Layout = () => {
   return(
     <div>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter forceRefresh={true}>
       <Navbar />
     </BrowserRouter>
     </div>
   )
 }
+export const Layout;

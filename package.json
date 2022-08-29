@@ -1,7 +1,6 @@
 {
   "name": "restaurantwebsite",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -9,8 +8,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "express.js": "^1.0.0",
     "nodemon": "^2.0.19",
     "react": "^18.2.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }

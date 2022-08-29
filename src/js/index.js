@@ -4,6 +4,8 @@ import "../styles/index.css";
 
 import Layout from "./layout";
 
+const renderAll = document.querySelector("#app");
+const root = ReactDom.createRoot(renderAll);
 
 
-ReactDOM.render(<Layout />, document.querySelector("#app"));
+root.render(<Layout />);
