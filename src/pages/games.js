@@ -1,22 +1,24 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "../styles/games.css"
 
 export const Games = () => {
 
   const [dataState,setDataState]  = useState([]);
 
-  const options = {
-  	method: 'GET',
-  	headers: {
-  		'X-RapidAPI-Key': 'ec6d8a720cmsh255648ecb94406cp143831jsn88cf58e7b4db',
-  		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-  	}
-  };
- 
-  fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc', options)
-  .then((response) => {return response.json()})
-  .then((data) => {setDataState(data)})
-  .catch((err) => console.error(err))
+  useEffect(() => {
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'ec6d8a720cmsh255648ecb94406cp143831jsn88cf58e7b4db',
+        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+      }
+    };
+    
+    fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=pc', options)
+   .then((response) => {return response.json()})
+   .then((data) => {setDataState(data)})
+   .catch((err) => console.error(err))
+  },[])
 
 
 
@@ -43,6 +45,7 @@ export const Games = () => {
       })}
       
       </div>
+      <p style={{"margin": "auto", "text": "white"}}>All Games Provided By RapidAPI free-to-play-games</p>
     </div>
     )
 }

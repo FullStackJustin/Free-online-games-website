@@ -1,12 +1,10 @@
 .gamesContainer{
-  padding-top: 3em;
-  padding-bottom: 3em;
   display:flex;
-    justify-content: center;
     align-items: center;
     flex-direction:row;
-    overflow-y: scroll;
-    height: 50vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 75vh;
     width: 100vw;
 }
 .moreBtn{
@@ -45,8 +43,9 @@ background-size: 85%;
   font-family: silkscreen;
 }
 .game{
-  font-size: 1rem;
-  margin: 2em 0em 0em 5rem;
+  font-size: auto;
+  margin-left: 1vw;
+  margin-right: 1vw;
   font-family: silkscreen;
   border-top: 5px dashed red;
   border: 1px solid rgb(78,78,89);
@@ -55,15 +54,19 @@ background-size: 85%;
   box-shadow: 20px 20px rgba(0,0,0,.15);
   transition: all .4s ease;
   background-color: rgb(35,34,37);
-  width: 30rem;
-  height: 20em;
-  padding:1em ;
+  min-width: 25vw;
+  height: auto;
+  padding-left:2.5em ;
+  padding-right:2.5em ;
+  padding-bottom:2.5px;
+  overflow-y: scroll;
+  /* overflow: auto; */
   /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 .game:hover{
   border-radius: 0% 0% 50% 50% / 0% 0% 25% 25% ;
   box-shadow: 10px 10px rgba(0,0,0,.25);}
 img{
-  width:5em;
+  width:90%;
   object-fit: contain;
 }
