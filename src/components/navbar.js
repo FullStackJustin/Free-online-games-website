@@ -5,11 +5,11 @@ const Navbar = () =>{
   return (
     <nav className="navbar" role="navigation">
     <div className="logo">
-    <h1 className="logoText"><a href="/home">JMedia</a></h1>
+    <h1 className="logoText"><a href="#">JMedia</a></h1>
     </div>
       <div className="navbar-container">
         <ul id="menu">
-          <li><a href="/games">PC Games</a></li>
+          <li><a href="#">PC Games</a></li>
         </ul>
       </div>
     </nav>
